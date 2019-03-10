@@ -9,8 +9,6 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700"
         rel="stylesheet">
 
@@ -200,19 +198,35 @@
         <div id="kontakt"></div>
         <div class="full-width blue">
             <div class="page-wrapper">
-                    <h2>Kontakt</h2>
+                <h2>Kontakt</h2>
                 <article class="contact">
-                    <p> W celu zaoszczędzenia Państwa czasu, możliwy jest kontakt w formie telekonferencji za pomocą
-                        programu Skype lub spotkanie w dogodnym dla Państwa miejscu.</p>
-                    <address>
-                        <strong>Kancelaria Radcy Prawnego Dawid Gawrysiak</strong> <br>
+                    <div class="left">
+                        <p> W celu zaoszczędzenia Państwa czasu, możliwy jest kontakt w formie telekonferencji za pomocą
+                            programu Skype lub spotkanie w dogodnym dla Państwa miejscu.</p>
+                        <address>
+                            <strong>Kancelaria Radcy Prawnego Dawid Gawrysiak</strong> <br>
 
-                        ul. Winiarska 56D/35, 60-654 Poznań <br>
+                            ul. Winiarska 56D/35, 60-654 Poznań <br>
 
-                        telefon: 661 497 118 <br>
+                            telefon: 661 497 118 <br>
 
-                        e-mail: <a href="mailto:dawid.gawrysiak@dgprawo.pl">dawid.gawrysiak@dgprawo.pl</a>
-                    </address>
+                            e-mail: <a href="mailto:dawid.gawrysiak@dgprawo.pl">dawid.gawrysiak@dgprawo.pl</a>
+                        </address>
+                    </div>
+                    <form class="form" action="https://mailthis.to/chaczyk113@o2.pl">
+                        <h3>Zostaw wiadomość</h3>
+                        <label for="_replyto">E-mail</label>
+                        <input id="email" name="_replyto" type="email" placeholder="adres@email.com" required>
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" name="phone" placeholder="600123123" pattern="[0-9]{9}">
+                        <label for="message">Treść</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Zadaj pytanie..."></textarea>
+                        <button type="submit" name="submit" value="Send" id="submit">Wyślij</button>
+                        <input type="hidden" name="_subject" value="Pytanie ze strony">
+                        <input type="hidden" name="_after" value="#">
+                        <input type="hidden" name="_honeypot" value="">
+                        <input type="hidden" name="_confirmation" value="">
+                    </form>
                 </article>
             </div>
 
@@ -221,7 +235,7 @@
 
     <footer>
         <p>Kancelaria Radcy Prawnego Dawid Gawrysia dawid.gawrysiak@dgprawo.pl +48661497118</p>
-        <p class="author">&copy;  <a href="">JZ</a> 2019</p>
+        <p class="author">&copy; <a href="">JZ</a> 2019</p>
 
     </footer>
 

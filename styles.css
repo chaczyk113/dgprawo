@@ -342,7 +342,11 @@ article p {
 
 .contact {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.contact .left{
+    width: 45%;
 }
 
 .contact a:link, .contact a:visited {
@@ -351,14 +355,45 @@ article p {
 
 .contact p{
     /* width: 500px; */
-    width: 50%;
+    width: 100%;
 }
 
 address {
-    width: 50%;
-    text-align: right;
+    width: 100%;
+    text-align: left;
     display: block;
 }
+
+.contact .form{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form *{
+    margin: 5px 0;
+}
+
+.form input, .form textarea{
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.form button {
+    padding: 5px;
+    border-radius: 5px;
+    width: 120px;
+    background-color: white;
+    font-weight: 700;
+}
+
+.form button:hover {
+    background-color: rgb(106, 139, 170);
+}
+
+textarea {
+    resize: none;
+ }
 
 footer {
     font-size: 10px;
