@@ -50,10 +50,12 @@ header {
 }
 
 .top-menu-links>li {
-    display: inline;
+    display: inline-block;
     list-style: none;
     align-self: flex-end;
     padding: 20px 0;
+    width: 130px;
+    text-align: center;
     /* background-color: @pageColor; */
     text-transform: uppercase;
 }
@@ -68,7 +70,9 @@ header {
 }
 
 .top-menu-links a {
-    padding: 0 18px;
+    display: inline-block;
+    width: 100%;
+    /* padding: 0 18px; */
 }
 
 .top-menu-links a:not(.last) {
@@ -165,7 +169,7 @@ h2 {
 }
 
 article p {
-    margin: 10px 0;
+    margin: 10px 7px;
     text-align: justify;
 }
 
@@ -192,12 +196,13 @@ article p {
 }
 
 .team-cards {
+    position: relative;
     display: flex;
     justify-content: center;
 }
 
 .card:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 .card {
@@ -215,12 +220,12 @@ article p {
     align-content: space-between;
     margin: 0 5px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
-    transition: transform .2s;
+    transition: transform .1s;
     z-index: 1;
 }
 
 .opened-card {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .opened-card::after {
@@ -293,6 +298,9 @@ article p {
 
 .des {
     display: none;
+    /* width: 700px; */
+    position: absolute;
+    top: 350px;
 }
 
 .display {
@@ -361,6 +369,7 @@ article p {
 address {
     width: 100%;
     text-align: left;
+    margin-left: 15px;
     display: block;
 }
 
