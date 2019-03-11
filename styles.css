@@ -30,7 +30,6 @@ header {
     border-bottom: 3px solid #000055;
 }
 
-
 .logo img {
     margin-left: 30px;
 }
@@ -54,7 +53,7 @@ header {
     list-style: none;
     align-self: flex-end;
     padding: 20px 0;
-    width: 130px;
+    width: 120px;
     text-align: center;
     /* background-color: @pageColor; */
     text-transform: uppercase;
@@ -77,6 +76,27 @@ header {
 
 .top-menu-links a:not(.last) {
     border-right: 1px solid black;
+}
+
+#menu-button {
+    min-width: 60px;
+    height: 60px;
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 5px 0px;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 25px;
+    cursor: pointer;
+    /* align-self: center; */
+}
+
+#menu-button:focus{
+ outline: 0;
 }
 
 .page-wrapper {
@@ -211,7 +231,8 @@ article p {
     height: 320px;
     display: flex;
     /*flex-direction: column;
-    */flex-wrap: wrap;
+    */
+    flex-wrap: wrap;
     text-align: center;
     background-color: white;
     border: 2px solid rgba(8, 51, 91, 0.75);
@@ -308,11 +329,11 @@ article p {
 }
 
 .transparent-blue {
-    background-color:rgba(8, 51, 91, 0.75);
+    background-color: rgba(8, 51, 91, 0.75);
 }
 
 .blue {
-    background-color:rgba(8, 51, 91, 1);
+    background-color: rgba(8, 51, 91, 1);
 }
 
 .full-width {
@@ -324,7 +345,7 @@ article p {
     width: 40%;
 }
 
-.img-container img{
+.img-container img {
     display: block;
     width: 100%;
     height: 100%;
@@ -332,7 +353,6 @@ article p {
 
 .prices {
     width: 60%;
-
 }
 
 .text-container {
@@ -343,9 +363,9 @@ article p {
     color: white;
     /* border: 1px solid red; */
 }
+
 .prices h2 {
     text-align: right;
-
 }
 
 .contact {
@@ -353,7 +373,7 @@ article p {
     justify-content: space-between;
 }
 
-.contact .left{
+.contact .left {
     width: 45%;
 }
 
@@ -361,7 +381,7 @@ article p {
     color: white;
 }
 
-.contact p{
+.contact p {
     /* width: 500px; */
     width: 100%;
 }
@@ -373,17 +393,17 @@ address {
     display: block;
 }
 
-.contact .form{
+.contact .form {
     width: 45%;
     display: flex;
     flex-direction: column;
 }
 
-.form *{
+.form * {
     margin: 5px 0;
 }
 
-.form input, .form textarea{
+.form input, .form textarea {
     padding: 3px;
     border-radius: 5px;
 }
@@ -402,7 +422,7 @@ address {
 
 textarea {
     resize: none;
- }
+}
 
 footer {
     font-size: 10px;
@@ -416,4 +436,49 @@ footer p {
 
 .author {
     float: right;
+}
+
+@media only screen and (max-width: 960px) {
+    .logo {
+        align-self: center;
+        justify-content: center;
+    }
+    .logo img {
+        width: 85%;
+        height: auto;
+        margin: 0 10px;
+
+    }
+    .top-menu-links {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: rgb(223, 232, 236);
+        width: 100%;
+        left: 0;
+        top: 75px;
+        padding: 15px 0;
+        z-index: 2;
+    }
+    .top-menu-links li {
+        width: 75%;
+        padding: 15px 20px;
+        display: block;
+        height: 50px;
+        margin: 0;
+        /* background-color: @greyColor; */
+        border: none;
+        justify-self: center;
+        align-self: center;
+    }
+    .top-menu-text a:link, .top-menu-text a:visited {
+        color: #000000;
+    }
+
+    .top-menu-links a:not(.last) {
+        border-right: none;
+    }
+    #menu-button {
+        display: block;
+    }
 }

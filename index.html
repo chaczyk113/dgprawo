@@ -15,8 +15,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
-
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -25,8 +23,9 @@
         <div class="page-wrapper">
             <nav class="top-menu">
                 <div class="logo">
-                    <a href="#"><img src="./imgs/logo2.png" alt="obrazek logo"></a>
+                    <a href=""><img src="./imgs/logo2.png" alt="obrazek logo"></a>
                 </div>
+
                 <div class="nav-buttons">
                     <ul class="top-menu-links">
                         <li><a href="#o-nas">O nas</a></li>
@@ -36,6 +35,7 @@
                         <li><a class="last" href="#kontakt">Kontakt</a></li>
                     </ul>
                 </div>
+                <button id="menu-button" class="" onclick="showMenu()"><i class="fas fa-bars"></i></button>
             </nav>
         </div>
     </header>
@@ -201,20 +201,21 @@
                 <h2>Kontakt</h2>
                 <article class="contact">
                     <div class="left">
-                        <p> W celu zaoszczędzenia Państwa czasu, możliwy jest kontakt w formie telekonferencji za pomocą
-                            programu Skype lub spotkanie w dogodnym dla Państwa miejscu.</p>
+                        <p>Prosimy kontatkować się bezpośrednio za pomocą podanych danych teleadresowych lub za pośrednictwem dostępnego na stronie formularza.</p>
+                        <p> W celu zaoszczędzenia Państwa czasu, dalszy kontakt możliwy jest w formie telekonferencji za pomocą programu Skype lub spotkania w dogodnym dla Państwa miejscu.</p>
+
                         <address>
                             <strong>Kancelaria Radcy Prawnego Dawid Gawrysiak</strong> <br>
 
-                            ul. Winiarska 56D/35, 60-654 Poznań <br>
+                            ul. Winiarska 56D/35<br>
+                            60-654 Poznań <br>
 
                             telefon: 661 497 118 <br>
 
                             e-mail: <a href="mailto:dawid.gawrysiak@dgprawo.pl">dawid.gawrysiak@dgprawo.pl</a>
                         </address>
                     </div>
-                    <!-- <form class="form" action="https://mailthis.to/contactchaczyk"  method="POST"> -->
-                    <form class="form" action="https://formspree.io/chaczyk113@o2.pl"  method="POST">
+                    <form class="form" action="https://mailthis.to/contactchaczyk"  method="POST">
                         <h3>Zostaw wiadomość</h3>
                         <label for="_replyto">E-mail</label>
                         <input id="email" name="_replyto" type="email" placeholder="adres@email.com" required>
@@ -223,10 +224,10 @@
                         <label for="message">Treść</label>
                         <textarea name="message" id="message" cols="30" rows="10" placeholder="Zadaj pytanie..."></textarea>
                         <button type="submit" name="submit" value="Send" id="submit">Wyślij</button>
-                        <!-- <input type="hidden" name="_subject" value="Pytanie ze strony">
+                        <input type="hidden" name="_subject" value="Pytanie ze strony">
                         <input type="hidden" name="_after" value="http://dgprawo.pl">
                         <input type="hidden" name="_honeypot" value="">
-                        <input type="hidden" name="_confirmation" value=""> -->
+                        <input type="hidden" name="_confirmation" value="">
                     </form>
                 </article>
             </div>
@@ -236,10 +237,11 @@
 
     <footer>
         <p>Kancelaria Radcy Prawnego Dawid Gawrysia dawid.gawrysiak@dgprawo.pl +48661497118</p>
-        <p class="author">&copy; <a href="">JZ</a> 2019</p>
+        <p class="author">&copy; <a href="mailto:jakzacha@gmail.com">JZ</a> 2019</p>
 
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
