@@ -34,16 +34,15 @@ function showMenu() {
     // console.log(menuList.style.display);
     if (menuList.style.display == "flex") {
         menuList.style.display = "none";
+        menuButton.classList.remove("button-pressed");
     }
     else {
         menuList.style.display = "flex";
+        menuButton.classList.add("button-pressed");
     }
 }
 
 window.addEventListener('resize', function () {
-    resize_product_img();
-    resize_description_img();
-    move_dropdown();
     restoreMenu();
 
 });
@@ -52,15 +51,10 @@ window.addEventListener('resize', function () {
 function restoreMenu() {
     var menuList = document.querySelector(".top-menu-links");
     var menuButton = document.getElementById("menu-button");
-    var menuBar = document.querySelector("nav");
-    var menuLogo = document.querySelector(".logo img");
 
     var w = window.innerWidth;
-    if (w > 1260) {
+    if (w > 960) {
         menuList.style.display = "";
-        menuButton.innerHTML = "MENU";
-        menuButton.classList.remove("button-black");
-        menuBar.classList.remove("bg-drop-menu");
-        menuLogo.src = "../images/logo-white.png"
+        menuButton.classList.remove("button-pressed");
     }
 }

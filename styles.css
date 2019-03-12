@@ -40,6 +40,7 @@ header {
     font-weight: 400;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     z-index: 1;
 }
 
@@ -71,6 +72,7 @@ header {
 .top-menu-links a {
     display: inline-block;
     width: 100%;
+    /* height: 100%; */
     /* padding: 0 18px; */
 }
 
@@ -79,27 +81,30 @@ header {
 }
 
 #menu-button {
-    min-width: 60px;
-    height: 60px;
+    min-width: 50px;
+    height: 50px;
     display: none;
     font-size: 24px;
     font-weight: bold;
-
-    background-color: transparent;
     border-radius: 5px;
     padding: 5px 0px;
     text-align: center;
     text-decoration: none;
     margin-right: 25px;
     cursor: pointer;
-    /* align-self: center; */
+    align-self: center;
 }
 
-#menu-button:focus{
- outline: 0;
+.normal-button {
+    background-color: white;
+}
+
+#menu-button:focus {
+    outline: 0;
 }
 
 .page-wrapper {
+    min-width: 320px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -439,21 +444,30 @@ footer p {
 }
 
 @media only screen and (max-width: 960px) {
+    header {
+        position: static;
+    }
     .logo {
         align-self: center;
-        justify-content: center;
+        justify-self: center;
     }
     .logo img {
+        min-width: 200px;
         width: 85%;
         height: auto;
         margin: 0 10px;
-
+    }
+    :target {
+        display: block;
+        position: relative;
+        top: 0;
+        visibility: hidden;
     }
     .top-menu-links {
         display: none;
         position: absolute;
         flex-direction: column;
-        background-color: rgb(223, 232, 236);
+        background-color: rgba(8, 51, 91, 1);
         width: 100%;
         left: 0;
         top: 75px;
@@ -462,23 +476,113 @@ footer p {
     }
     .top-menu-links li {
         width: 75%;
-        padding: 15px 20px;
+        padding: 0 0;
         display: block;
         height: 50px;
         margin: 0;
         /* background-color: @greyColor; */
         border: none;
-        justify-self: center;
         align-self: center;
+        /* border: 1px solid blue; */
     }
-    .top-menu-text a:link, .top-menu-text a:visited {
-        color: #000000;
-    }
-
     .top-menu-links a:not(.last) {
         border-right: none;
     }
+    .top-menu-links a {
+        padding: 10px 0;
+        /* border: 1px solid red; */
+        /* background-color: rgb(223, 232, 236); */
+        background-color: white;
+        border-radius: 5px;
+    }
     #menu-button {
         display: block;
+    }
+    .button-pressed {
+        background-color: rgba(8, 51, 91, 0.75);
+    }
+    #big-image {
+        position: relative;
+        margin-top: 0;
+        height: 80vw;
+        flex-direction: column;
+    }
+    #image-name {
+        margin: 5% auto;
+        width: 90%;
+        height: 90%;
+        background-color: rgba(8, 51, 91, 0.7);
+    }
+    h1 {
+        position: relative;
+        top: 5%;
+        right: 0;
+        /* margin: 0 auto; */
+        color: white;
+        font-weight: 400;
+        font-size: 4.5vw;
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+    }
+    #image-quote {
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
+    }
+    .quote {
+        top: 0;
+        right: 0;
+        /* bottom: -100px; */
+        color: white;
+        width: 100%;
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+    }
+    .quote h2 {
+        text-align: center;
+        font-size: 4vw;
+    }
+    .quote h3 {
+        font-weight: 400;
+        font-size: 3.5vw;
+    }
+    article {
+        padding: 5px 0;
+    }
+    article p {
+        margin: 10px 10px;;
+        text-align: justify;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .about .text {
+        width: 100%;
+    }
+
+    .about .icon {
+        width: 100%;
+        text-align: center;
+    }
+    .about .icon i {
+        font-size: 40px;
+        color: #000055;
+        top: 0;
+    }
+    .service-des, .service-points {
+        width: 100%;
+    }
+    .service-points {
+        margin: 5px 0 5px 25px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #big-image {
+        margin-top: 0;
+        height: 100vw;
+    }
+    h2 {
+        font-size: 24px;
     }
 }
