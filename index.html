@@ -128,9 +128,13 @@
                 <div class="team-cards">
                     <div class="card opened-card" id="dawid">
                         <img src="./imgs/teammate.png" alt="Dawid Gawrysiak - zdjęć">
-                        <h3>Dawid<br>Gawrysiak</h3>
-                        <p class="position">Radca prawny</p>
-                        <p>Język:<br>angielski oraz rosyjski</p>
+                        <div class="person-des">
+                            <div class="name-pos">
+                                <h3>Dawid<br>Gawrysiak</h3>
+                                <p class="position">Radca prawny</p>
+                            </div>
+                            <p>Język:<br>angielski oraz rosyjski</p>
+                        </div>
                     </div>
                     <div id="dawid-des" class="des display">
                         <p> Absolwent oraz stypendysta naukowy Wydziału Prawa i Administracji Uniwersytetu im. Adama
@@ -143,9 +147,13 @@
                     </div>
                     <div class="card" id="jaroslaw">
                         <img src="./imgs/teammate.png" alt="Jarosław Pustkowski - zdjęć">
-                        <h3>Jarosław<br>Pustkowski</h3>
-                        <p class="position">Radca prawny</p>
-                        <p>Język:<br>angielski oraz rosyjski</p>
+                        <div class="person-des">
+                            <div class="name-pos">
+                                <h3>Jarosław<br>Pustkowski</h3>
+                                <p class="position">Radca prawny</p>
+                            </div>
+                            <p>Język:<br>angielski oraz rosyjski</p>
+                        </div>
                     </div>
                     <div id="jaroslaw-des" class="des">
                         <p> Absolwent Wydziału Prawa i Administracji Uniwersytetu im. Adama Mickiewicza w Poznaniu. W
@@ -157,16 +165,22 @@
                     </div>
                     <div class="card" id="marek">
                         <img src="./imgs/teammate.png" alt="Marek Steltmann - zdjęć">
-                        <h3>Marek<br>Steltmann</h3>
-                        <p class="position">Rzeczoznawca majątkowy<br>
-                            <span>(nr uprawnień 3733)</span></p>
-                        <p class="language">Język:<br>niemiecki oraz rosyjski</p>
+                        <div class="person-des">
+                            <div class="name-pos">
+                                <h3>Marek<br>Steltmann</h3>
+                                <p class="position">Rzeczoznawca majątkowy<br>
+                                    <span>(nr uprawnień 3733)</span></p>
+                            </div>
+                            <p class="language">Język:<br>niemiecki oraz rosyjski</p>
+                        </div>
                     </div>
                     <div id="marek-des" class="des">
                         <p> Przeprowadza wyceny na zlecenia podmiotów prywatnych oraz publicznych od 2002 roku.
-                            Absolwent Politechniki Warszawskiej Instytutu Transportu w Warszawie oraz Uniwersytetu
+                            Absolwent Politechniki Warszawskiej Instytutu Transportu w Warszawie oraz
+                            Uniwersytetu
                             Warmińsko Mazurskiego w Olsztynie – Wydział Ekonomii. Ukończył studia podyplomowe na
-                            Politechnice Warszawskiej w Instytucie Transportu w Warszawie oraz studia podyplomowe na
+                            Politechnice Warszawskiej w Instytucie Transportu w Warszawie oraz studia
+                            podyplomowe na
                             Uniwersytecie Warmińsko-Mazurskim w Olsztynie na Wydziale Geodezji i Gospodarki
                             Przestrzennej.</p>
                     </div>
@@ -201,8 +215,10 @@
                 <h2>Kontakt</h2>
                 <article class="contact">
                     <div class="left">
-                        <p>Prosimy kontatkować się bezpośrednio za pomocą podanych danych teleadresowych lub za pośrednictwem dostępnego na stronie formularza.</p>
-                        <p> W celu zaoszczędzenia Państwa czasu, dalszy kontakt możliwy jest w formie telekonferencji za pomocą programu Skype lub spotkania w dogodnym dla Państwa miejscu.</p>
+                        <p>Prosimy kontatkować się bezpośrednio za pomocą podanych danych teleadresowych lub za
+                            pośrednictwem dostępnego na stronie formularza.</p>
+                        <p> W celu zaoszczędzenia Państwa czasu, dalszy kontakt możliwy jest w formie telekonferencji za
+                            pomocą programu Skype lub spotkania w dogodnym dla Państwa miejscu.</p>
 
                         <address>
                             <strong>Kancelaria Radcy Prawnego Dawid Gawrysiak</strong> <br>
@@ -215,14 +231,15 @@
                             e-mail: <a href="mailto:dawid.gawrysiak@dgprawo.pl">dawid.gawrysiak@dgprawo.pl</a>
                         </address>
                     </div>
-                    <form class="form" action="https://mailthis.to/contactchaczyk"  method="POST">
+                    <form class="form" action="https://mailthis.to/contactchaczyk" method="POST">
                         <h3>Zostaw wiadomość</h3>
                         <label for="_replyto">E-mail</label>
                         <input id="email" name="_replyto" type="email" placeholder="adres@email.com" required>
                         <label for="phone">Telefon</label>
                         <input type="tel" id="phone" name="phone" placeholder="600123123" pattern="[0-9]{9}">
                         <label for="message">Treść</label>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Zadaj pytanie..."></textarea>
+                        <textarea name="message" id="message" cols="30" rows="10"
+                            placeholder="Zadaj pytanie..."></textarea>
                         <button type="submit" name="submit" value="Send" id="submit">Wyślij</button>
                         <input type="hidden" name="_subject" value="Pytanie ze strony">
                         <input type="hidden" name="_after" value="http://dgprawo.pl">

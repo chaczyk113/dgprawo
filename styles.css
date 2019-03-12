@@ -446,6 +446,7 @@ footer p {
 @media only screen and (max-width: 960px) {
     header {
         position: static;
+        height: auto;
     }
     .logo {
         align-self: center;
@@ -455,7 +456,7 @@ footer p {
         min-width: 200px;
         width: 85%;
         height: auto;
-        margin: 0 10px;
+        /* margin: 0 10px; */
     }
     :target {
         display: block;
@@ -575,14 +576,62 @@ footer p {
     .service-points {
         margin: 5px 0 5px 25px;
     }
+
+    .team-cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+    }
+
+    .card {
+        position: relative;
+        width: 70%;
+        height: 160px;
+        flex-wrap: wrap;
+        justify-content:  space-around;
+        align-content: space-around;
+        margin: 5px 0;
+    }
+
+    .card h3 {
+        width: auto;
+    }
+
+    .des {
+        position: static;
+        margin: 20px 0 5px 0;
+    }
+    .descriptions  {
+        display: none;
+    }
+
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 460px) {
+    .logo img {
+       /* margin-top: 2%; */
+    }
     #big-image {
         margin-top: 0;
         height: 100vw;
     }
     h2 {
         font-size: 24px;
+    }
+    .card {
+        position: relative;
+        width: 70%;
+        height: 280px;
+    }
+    .card img {
+        width: auto;
+        height: 100px;
+    }
+    .person-des {
+        width: 100%;
     }
 }
