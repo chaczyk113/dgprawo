@@ -7,19 +7,34 @@ window.onload = ()=>{
 
 
     document.querySelector(".team-cards").addEventListener('click', (e)=> {
-        cardClicekd = e.target.closest('.card');
+        var w = window.innerWidth;
+        var cardClicekd = e.target.closest('.card');
          if (cardClicekd){
+            var cardOppened = cardClicekd.classList.contains("opened-card");
             for (card of cards) {
                 card.classList.remove("opened-card");
             }
-            cardClicekd.classList.add("opened-card")
             for (des of descriptions) {
                 des.classList.remove("display");
-                if (des.id.includes(cardClicekd.id)) {
-                    des.classList.add("display");
+            }
+            if (w > 960) {
+                console.log("big")
+                cardClicekd.classList.add("opened-card")
+                for (des of descriptions) {
+                    if (des.id.includes(cardClicekd.id)) {
+                        des.classList.add("display");
+                    }
                 }
             }
-
+            else if (!cardOppened) {
+                cardClicekd.classList.add("opened-card")
+                console.log("oppened");
+                for (des of descriptions) {
+                    if (des.id.includes(cardClicekd.id)) {
+                        des.classList.add("display");
+                    }
+                }
+            }
 
          }
     })
