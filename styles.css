@@ -441,6 +441,10 @@ footer p {
     float: right;
 }
 
+h3 {
+    margin: 5px 0;
+}
+
 @media only screen and (max-width: 960px) {
     body {
         font-size: 14px;
@@ -449,7 +453,7 @@ footer p {
     }
     header {
         position: static;
-        height: auto;
+        height: 80px;
     }
     .logo {
         align-self: center;
@@ -474,7 +478,7 @@ footer p {
         background-color: rgba(8, 51, 91, 1);
         width: 100%;
         left: 0;
-        top: 75px;
+        top: 70px;
         padding: 15px 0;
         z-index: 2;
     }

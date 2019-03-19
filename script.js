@@ -1,15 +1,34 @@
-window.onload = ()=>{
+window.onload = () => {
     const cardsList = document.querySelectorAll('.card');
     const cards = Array.from(cardsList)
 
     const desList = document.querySelectorAll('.des');
     const descriptions = Array.from(desList)
 
+    // Funckja usuwająca wiszące spójniki
+    var unbrakeConjuctions = (function() {
+        var elements = document.querySelectorAll('p');
+        Array.prototype.forEach.call(elements, function (el, i) {
+            var textReplace = el.innerHTML;
+            var lettersToReplace = ["a","i","o","u","w","z","A","I","O","U","W","Z"];
+            var arrayLength = lettersToReplace.length;
+            for (var i = 0; i < arrayLength; i++) {
+              var textSplit = textReplace.split(' ' + lettersToReplace[i] + ' ');
+              var textReplace = textSplit.join(' ' + lettersToReplace[i] + '&nbsp;');
+            }
+            el.innerHTML = '';
+            el.innerHTML = textReplace;
+        });
+    })();
 
-    document.querySelector(".team-cards").addEventListener('click', (e)=> {
+    var cookieHandler = (function(){
+        // var galTable= new Array(); var galx = 0;</script><script type="text/javascript">function simplecookienotification_v01_create_cookie(name,value,days) { if (days) { var date = new Date(); date.setTime(date.getTime()+(days*24*60*60*1000)); var expires = "; expires="+date.toGMTString(); } else var expires = ""; document.cookie = name+"="+value+expires+"; path=/"; document.getElementById("simplecookienotification_v01").style.display = "none"; } function simplecookienotification_v01_read_cookie(name) { var nameEQ = name + "="; var ca = document.cookie.split(";"); for(var i=0;i < ca.length;i++) { var c = ca[i]; while (c.charAt(0)==" ") c = c.substring(1,c.length); if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length); }return null;}var simplecookienotification_v01_jest = simplecookienotification_v01_read_cookie("simplecookienotification_v01");if(simplecookienotification_v01_jest==1){ document.getElementById("simplecookienotification_v01").style.display = "none"; }
+    })();
+
+    document.querySelector(".team-cards").addEventListener('click', (e) => {
         var w = window.innerWidth;
         var cardClicekd = e.target.closest('.card');
-         if (cardClicekd){
+        if (cardClicekd) {
             var cardOppened = cardClicekd.classList.contains("opened-card");
             for (card of cards) {
                 card.classList.remove("opened-card");
@@ -36,7 +55,7 @@ window.onload = ()=>{
                 }
             }
 
-         }
+        }
     })
 };
 
